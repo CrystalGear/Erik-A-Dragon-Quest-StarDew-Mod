@@ -1,0 +1,11 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "data/NPCDispositions",
+      "Entries": {
+        "Erik": "adult/polite/outgoing/positive/male/datable/null/Town/summer 7//Custom_Eriks_House 23 9/Erik"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "Name": "Erik",
+  "Author": "Deban",
+  "Description": "Created by MissCoriel's NPC Creator!-=Created By MissCoriel's NPC Creator=-",
+  "Version": "1.0.0",
+  "UniqueID": "Author.Mod",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  },
+  "UpdateKeys": [
+    "Nexus: "
+  ]
+}

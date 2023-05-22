@@ -1,0 +1,108 @@
+{
+  "Format": "1.21.0",
+  "CustomLocations": [
+
+    //Additional Custom Maps added to the base game:
+
+    //ERIKS HOUSE INTERIOR
+    {
+      "Name": "Custom_Eriks_House",
+      //File Location in Folder Structure
+      "FromMapFile": "assets/Custom_Eriks_House.tmx"
+    }
+  ],
+  "Changes": [
+    //Edits to already existing Maps of the game:
+
+    //MAP TOWN ERIKS HOUSE EXTERIOR
+    {
+      //Takes custom map and patches over original town map
+      "Action": "EditMap",
+      "Target": "assets/Town",
+      //File Location in Folder Structure
+      "FromFile": "assets/Town_Eriks_House.tmx",
+      "FromArea": {
+        "x": 93,
+        "y": 10,
+        "Width": 27,
+        "Height": 27
+      },
+      "ToArea": {
+        "x": 93,
+        "y": 10,
+        "Width": 27,
+        "Height": 27
+      }
+    },
+    //NPC CREATION ERIK
+    {
+      "LogName": "NPC Manifestation",
+      "Action": "Include",
+      "FromFile": "assets/disposition/Disposition.json"
+    },
+    //NPCS gifts Tastes:
+    {
+      "LogName": "NPC Gift Tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+    //Dialouge reactions for gifts:
+      "Entries": {
+        "Erik": "Oh wow this is amazing!  Thank you!/-2 373 109 72 74 70 68 66 64 62 60/How nice of you, this is great./565 546 337 335 334 82 84 86 80 211 220 224 223 334 335 337 338 340/Oh.. well it's the though that counts I guess./151 170 171 172 169 168 174 176 196 336 373/Gross... You're Gross.../336 124 125/Thanks/206 205 201 200 199 198 197 195 194 346 348 349 "
+      }
+    },
+    //NPC TEXTURES:
+    {
+
+      //NPC sprite sheet(Their appearance in the world):
+
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/Erik",
+      "FromFile": "assets/img/spritesheet.png"
+    },
+    {
+      //NPC Portrait(Their close up shots of their face):
+      "LogName": "NPC Portrait",
+      "Action": "Load",
+      "Target": "Portraits/Erik",
+      "FromFile": "assets/img/portrait.png"
+    },
+
+    //NPC scheduling and Dialouge:
+
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Erik",
+      "FromFile": "assets/schedules/schedule.json"
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Erik",
+      "FromFile": "assets/dialogue/Dialogue.json"
+    },
+    {
+      "LogName": "Schedule Dialogue",
+      "Action": "Load",
+      "Target": "Strings/schedules/Erik",
+      "FromFile": "assets/schedules/scheduleDialogue.json"
+    },
+    {
+      "LogName": "Marriage Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueErik",
+      "FromFile": "assets/dialogue/MarriageDialogue.json"
+    },
+    {
+      "LogName": "Engagement Dialogue",
+      "Action": "EditData",
+      "Target": "Data/EngagementDialogue",
+      "Entries": {
+        //Dialogue for engagement:
+        "Erik0": "I am so happy!$1",
+        "Erik1": "You've made me so truly happy, I can't wait to spend the rest of my life with you$4"
+      }
+    }
+  ]
+}
